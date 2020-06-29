@@ -1,0 +1,268 @@
+.contact .container--flex {
+    align-items: flex-start/* todos esten en el mismo altura*/
+}
+.group__title {
+    font-size: 2.3em;
+    color: #DE423A;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.contact--info {/* separacion, linea naranja */
+    padding-left: 10px;
+    padding: 10px; /* espaciado en todos lados del borde*/
+    padding-top: 0px; /* sin espacio arriba */
+    margin-bottom: 2px ;
+     /* la linea naranja anajo o al lado*/
+    display: block;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+   
+}
+
+.contact--info .column__title{/* solo para las clases column__title que esta dentro del contact--info*/
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    font-size: 1.4em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    
+}
+.contact--info .column__txt{
+	margin: 2px;
+	
+}
+.contact--info [class*="icon-"] {/* */
+    font-size: 1.3em;
+    margin-right: 7px; /* se separa un poco lo que esta a la derecha*/
+    position: relative;/**/
+    top: 7px;   /* para poder bajarlo junto con el relative*/
+}
+
+.contact--info .social-icon {
+    justify-content: flex-start; /* alineacion a la izquierda, siempre empieza desde la izquierda*/
+    margin-bottom: 10px; /* margen abajo*/
+    margin-left: 100px;/*los icinos los ponemos centrados tambien */
+}
+/* al hacer esto esmos seleecionando todos los lementos que "icon-" que esten dentro de la clase "social-icon" y esten dentro de social--info */ 
+.contact--info .social-icon [Class*="icon-"] {
+    background: black;/* poner fondo negro**/
+    color: white; /* poner los iconos blancos*/
+    margin-left: 30px;/* los juntamos a la izquierda*/
+    
+}
+
+
+.formulario {
+    padding: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    margin-left: 40px;
+}
+
+.formulario__label{
+    margin-left: 12px;
+    font-size: 1.1em;
+
+}
+
+ .formulario__input__txt, .formulario__textarea {
+   display: block;/*uno debajo del otro*/
+    width: 90%;
+    border-radius: 6px;
+    border: 1.3px black solid;
+    margin-bottom: 2px;
+    font-family: cursive;
+    font-size: 1.2em;
+}
+
+.formulario__input__txt {
+    padding: 3px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+}
+
+
+.formulario__textarea {
+    min-height: 100px;
+    min-width: 90%;
+    max-width: 90%;
+    max-height: 150px;
+    margin-left: 10px;
+
+}
+
+.btncontact {
+		 	    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    background: #DE423A;
+    color: white;
+    padding: 10px;
+    margin: 10px auto; /*para que quede centrado*/
+    border-radius: 10px;
+	font-family: cursive;
+	border: none;
+	font-size: .95em;
+
+}
+
+/**-----------------------Estilos para 480------------------**/
+@media screen and (min-width:491px) { 
+    .contact--info p {
+        font-size: .9em;
+    }
+    
+    .contact--info {/* separacion, linea naranja */
+    padding-left: 0px;
+    padding: 0px; /* espaciado en todos lados del borde*/
+    padding-top: 0px; /* sin espacio arriba */
+    margin-bottom: 2px ;
+    margin-left: 0px;
+     /* la linea naranja anajo o al lado*/
+    font-size: 1.2em;
+    }
+    
+    .column--50 {
+        align-items: flex-start;
+    }
+
+    
+    /* al hacer esto esmos seleecionando todos los lementos que "icon-" que esten dentro de la clase "social-icon" y esten dentro de social--info */ 
+    .contact--info .social-icon [Class*="icon-"] {
+    background: black;/* poner fondo negro**/
+    color: white; /* poner los iconos blancos*/
+    margin-left: 10px;/* los juntamos a la izquierda*/
+    margin-right: 30px;/* luego le damos una separacion */
+    }
+    
+    .formulario {
+    display: block;
+    padding: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+
+    }
+	.contact--info .social-icon {
+    justify-content: flex-start; /* alineacion a la izquierda, siempre empieza desde la izquierda*/
+    margin-bottom: 10px; /* margen abajo*/
+    margin-left: 30px;/*los icinos los ponemos centrados tambien */
+    }
+
+    .contact--info .column__txt{
+	margin: 15px;
+	}
+}
+/**-----------------------Estilos para 768------------------**/
+@media screen and (min-width:500px) { 
+
+    .contact--info .social-icon {
+    justify-content: flex-start; /* alineacion a la izquierda, siempre empieza desde la izquierda*/
+    margin-bottom: 10px; /* margen abajo*/
+    margin-left: 30px;/*los icinos los ponemos centrados tambien */
+    }
+    
+}
+/**-----------------------Estilos para 768------------------**/
+@media screen and (min-width:768px) { 
+     .contact--info p {
+        font-size: .7em;
+    }
+    .group__title {
+    font-size: 2.6em;
+    color: #DE423A;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    }
+    .contact--info .social-icon {
+    justify-content: flex-start; /* alineacion a la izquierda, siempre empieza desde la izquierda*/
+    margin-bottom: 10px; /* margen abajo*/
+    margin-left: 30px;/*los icinos los ponemos centrados tambien */
+    }
+      
+    .contact--info {/* separacion, linea naranja */
+    padding-left: 0px;
+    padding: 10px; /* espaciado en todos lados del borde*/
+    padding-top: 0px; /* sin espacio arriba */
+    margin-bottom: 2px ;
+    margin-left: 0px;
+     /* la linea naranja anajo o al lado*/
+    font-size: 1.2em;
+    }
+    
+    
+    .formulario {
+    display: block;
+    margin-bottom: 0px;
+
+    }
+    /* al hacer esto esmos seleecionando todos los lementos que "icon-" que esten dentro de la clase "social-icon" y esten dentro de social--info */ 
+    .contact--info .social-icon [Class*="icon-"] {
+    background: black;/* poner fondo negro**/
+    color: white; /* poner los iconos blancos*/
+    margin-left: 20px;/* los juntamos a la izquierda*/
+    margin-right: 60px;/* luego le damos una separacion */
+    }
+	 .contact--info .column__txt{
+	margin: 25px;
+		 font-size: .9em
+	}
+	 .formulario__input__txt, .formulario__textarea {
+   display: block;/*uno debajo del otro*/
+    width: 90%;
+    border-radius: 6px;
+    border: 1.2px black solid;
+    margin-bottom: 2px;
+    font-family: cursive;
+    font-size: .9em;
+	}
+	.formulario__label{
+		font-size: .9em;
+		font-family: cursive;
+		}
+}
+
+
+
+
+/**-----------------------Estilos para 1024------------------**/
+@media screen and (min-width:1024px) { 
+    
+    
+    .contact--info {/* separacion, linea naranja */
+    padding-left: 10px;
+    padding: 10px; /* espaciado en todos lados del borde*/
+    padding-top: 0px; /* sin espacio arriba */
+    margin-bottom: 2px ;
+    margin-left: 20px;
+     /* la linea naranja anajo o al lado*/
+    font-size: 1.2em;
+    }
+    
+    /* al hacer esto esmos seleecionando todos los lementos que "icon-" que esten dentro de la clase "social-icon" y esten dentro de social--info */ 
+    .contact--info .social-icon [Class*="icon-"] {
+    background: black;/* poner fondo negro**/
+    color: white; /* poner los iconos blancos*/
+    margin-left: 60px;/* los juntamos a la izquierda*/
+    margin-right: 60px;/* luego le damos una separacion */
+    } 
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+

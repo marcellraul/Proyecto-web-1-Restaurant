@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nosotros | Your Restaurant</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/stilos.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="logo-container column column--50">
+                <h1 class="logo"> Your Restaurant</h1>
+            </div>
+            <div class="main-header__contacInfo column column--50">
+                <p class="main-header__contactInfo__phone">
+                    <span class="icon-phone"> 999-999-999</span>
+                    <!--el span es para los iconos-->
+                </p>
+                 <p class="main-header__contactInfo__adress">
+                     <span class="icon-map">Barquisimeto, edo- Lara</span>                     
+                 </p>
+            </div>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <div class="container container--flex">
+            <span class="icon-bars" id="btnbars"></span>
+            <!-- ul.bars#bars>li.bars__item*4>a.bars__link-->   
+            <!-- elementos del menu(columnas)-->
+            <ul class="bars" id="bars">
+                <li class="bars__item"><a href="/" class="bars__link">Inicio</a></li>
+                                            <!--el select es el que hace que tenga un color distinto--> 
+                                         <!-- enlaces-->            <!--aqui el texto del item-->
+                <li class="bars__item"><a href="nosotros.html" class="bars__link bars__link--select">Nosotros</a></li>
+                <li class="bars__item"><a href="galeria.html" class="bars__link">Galería</a></li>
+                <li class="bars__item"><a href="contacto.html" class="bars__link">Contacto</a></li>
+            </ul>
+            
+            <!--.social-icon>a.social-icon__link*3>span.icon- -->
+            <div class="social-icon">
+                <a href="" class="social-icon__link"><span class="icon-facebook"></span></a>
+                <a href="" class="social-icon__link"><span class="icon-twitter"></span></a>
+                <a class="social-icon__link" ><span class="icon-caret" id="btncaret" ></span></a>
+            </div>
+            
+            <ul class="caret" id="caret">
+                <li class="bars__item"><a href="login.html" class="bars__link" >Iniciar Sesion</a></li>
+                <li class="bars__item"><a href="registrousuario.html" class="bars__link">Registrarse</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--   section.banner>img.banner__img+.banner__content esto es para la parte del banner-->
+   <section class="banner">
+       <img src="img/pizza-744405_1920.jpg" alt="" class="banner__img">
+       <div class="banner__content">¡Lo mejor de nosotros a tu servicio!</div>
+   </section>
+   <!-- main.main>section.group
+   etiqueta main es el principal, el contenido donde ponemos toda la informacion relevante
+   group color seccion para poner el color distintivo
+   -->
+   <main class="main">
+       <section class="group group--color">
+           <div class="container">
+               <h2 class="main__title">Conoce a nuestro equipo </h2>
+               <p class="main_txt"> Los mejores y mas reconocidos Cheff de la zona están aqui, ven y conocelos! </p>
+           </div>
+       </section>
+       <section class="group our-team">
+           <h2 class="group__title"> Nuetros Chefs</h2>
+           <!--.container.container__flex>.column.column--33*3>h3.our-team__title+img.our-team__img+p.our-team__txt-->
+           <div class="container container--flex">
+               <div class="column column--33">
+                   <h3 class="our-team__title">Donato DeSantis</h3>
+                   <img src="img/f8b43165345dd07f8a9d6b000b2423d0.jpg" alt="" class="our-team__img">
+                   <p class="our-team__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit saepe, ad. Distinctio dicta dignissimos voluptates dolorum assumenda, impedit accusamus corporis ex blanditiis sed vero tenetur aliquid qui voluptate rem, nemo.</p>
+               </div>
+               <div class="column column--33">
+                   <h3 class="our-team__title">Massimo Bottura</h3>
+                   <img src="img/massimo-bottura.jpg" alt="" class="our-team__img">
+                   <p class="our-team__txt">Las 10 cosas que me gustan de ti.
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore vitae qui quas, iusto pos</p>
+               </div>
+               <div class="column column--33">
+                   <h3 class="our-team__title">Leonardo Diskch</h3>
+                   <img src="img/beard-chef-cook-2102934.jpg" alt="" class="our-team__img">
+                   <p class="our-team__txt">       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, inventore at voluptate ab! Laborum quod quas molestias nam necessitatibus nihil, quisquam velit, voluptas autem iusto cumque, voluptatibus facere accusantium tempora? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit saepe, ad. Distinctio dicta dignissimos voluptates dolorum assumen</p>
+               </div>
+           </div>
+       </section>
+   </main>
+       <!-- ahora esto es para el footer, el pie de pagina -->
+   <footer class="main-footer">
+           <div class="container container--flex">
+              <!-- esto es para la parte de las 3 columnas-->
+               <div class="column column--33">
+                 <h2 class="column__title">¿Por que visitarnos?</h2>
+                 <p class="column__txt">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt labore perferendis inventore voluptas nihil, eos quasi sint veniam iste</p>
+               </div>
+               
+               <div class="column column--33">
+                 <h2 class="column__title">Contactos</h2>
+                 <p class="column__txt">Av. Florencio Jimenez. Ressidencias "El Portal"</p> 
+                 <p class="column__txt">Telefonos: 999.99.99</p> 
+                 <p class="column__txt">Mail: marcellraul20@gmail.com</p>
+                 <!--ctrl+d papa multiplicar las columnas--> 
+               </div>
+               
+               <div class="column column--33">
+                 <h2 class="column__title">Siguenos en las Redes</h2>
+                 <p class="column__txt"><a href="" class="icon-facebook"> Facebook</a></p>
+                 <p class="column__txt"><a href="" class="icon-twitter"> Twitter</a></p>
+                 <p class="column__txt"><a href="" class="icon-youtube"> Canal de Youtube</a></p>
+               </div>
+                     <hr>
+                      <p class="copy"> (c) 2019 Your Restaurant | Todos los dereches reservados  </p>
+
+           </div>
+           
+       </footer>
+ <script src="JS/menu.js"></script>
+</body>
+</html>

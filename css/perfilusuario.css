@@ -1,0 +1,77 @@
+*{
+	box-sizing: border-box;
+}
+.main-navperfilu{
+	background: #DE423A;
+}
+.main-navperfilu{
+	background: #DE423A;
+	height: 60px;
+	display: flex;
+	justify-content: flex-end;/*para llevarlos toods al final*/
+	align-items: center;/*esto es para los li y lu, para centrarlos*/
+	width: 100%
+}
+.menu__link{
+	color: white;
+	text-decoration: none;
+
+}
+.menu__bars{
+	width: 30px;
+	margin: 0 10px;
+	cursor: pointer;
+	
+}
+.menu__item {
+	margin: 0 15px;
+}
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+		transition: all .5s;
+
+}
+
+
+.uno, .dos, .tres{
+	width: 100%;
+	background: white;
+	height: 3px;
+	transition: all .5s;
+	border-radius: 10px;
+}
+
+.dos{
+	margin: 7px 0;
+}
+
+/**animaciones**/
+.mostrar2 .dos {
+	opacity: 0/* para que desaparezca cuando el cursor este sobre el*/
+}
+/**para ponerlos en verical o 45 grados**/
+.mostrar2 .uno {
+	transform: rotate(45deg) translate(5px, 6.5px);
+}
+
+.mostrar2 .tres {
+	transform: rotate(-45deg) translate(8px, -9px);
+}
+
+.mostrar2 .menu{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+
+
+
+
+

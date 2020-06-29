@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>| Your Restaurant</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/stilos.css">
+    <link rel="stylesheet" href="css/font.css">
+    
+</head>
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="logo-container column column--50">
+                <h1 class="logo"> Your Restaurant</h1>
+            </div>
+            <div class="main-header__contacInfo column column--50">
+                <p class="main-header__contactInfo__phone">
+                    <span class="icon-phone"> 999-999-999</span>
+                    <!--el span es para los iconos-->
+                </p>
+                 <p class="main-header__contactInfo__adress">
+                     <span class="icon-map">Barquisimeto, edo- Lara</span>                     
+                 </p>
+            </div>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <div class="container container--flex">
+            <span class="icon-bars" id="btnbars"></span>
+            <!-- ul.bars#bars>li.bars__item*4>a.bars__link-->   
+            <!-- elementos del menu(columnas)-->
+            <ul class="bars" id="bars">
+                <li class="bars__item"><a href="/" class="bars__link bars__link">Inicio</a></li>
+        <!--el select es el que hace que tenga un color distinto--> 
+     <!-- enlaces-->            <!--aqui el texto del item-->
+                <li class="bars__item"><a href="nosotros.html" class="bars__link">Nosotros</a></li>
+                <li class="bars__item"><a href="galeria.html" class="bars__link">Galería</a></li>
+                <li class="bars__item"><a href="contacto.html" class="bars__link">Contacto</a></li>
+            </ul>
+            
+            <!--.social-icon>a.social-icon__link*3>span.icon- -->
+            <div class="social-icon">
+                <a href="" class="social-icon__link"><span class="icon-facebook"></span></a>
+                <a href="" class="social-icon__link"><span class="icon-twitter"></span></a>
+                <a  class="social-icon__link"><span class="icon-caret" id="btncaret" ></span></a>
+            </div>
+            
+            <ul class="caret" id="caret">
+                <li class="bars__item"><a href="login.html" class="bars__link bars__link--select ">Iniciar Sesion</a></li>
+                <li class="bars__item"><a href="registrousuario.html" class="bars__link">Registrarse</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--   section.banner>img.banner__img+.banner__content esto es para la parte del banner-->
+   <section class="banner">
+       <img src="img/bannerontacto.jpg" alt="" class="banner__img">
+       <div class="banner__content">Escribe aqui</div>
+   </section>
+   <!-- main.main>section.group
+   etiqueta main es el principal, el contenido donde ponemos toda la informacion relevante
+   group color seccion para poner el color distintivo
+   -->
+  
+       <!-- ahora esto es para el footer, el pie de pagina -->
+   <footer class="main-footer">
+           <div class="container container--flex">
+              <!-- esto es para la parte de las 3 columnas-->
+               <div class="column column--33">
+                 <h2 class="column__title">¿Por que visitarnos?</h2>
+                 <p class="column__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt labore perferendis inventore voluptas nihil, eos quasi sint veniam iste quibusdam similique aliquam accusantium, nostrum cum in dicta totam illum molestias.</p>
+               </div>
+               
+               <div class="column column--33">
+                 <h2 class="column__title">Contactos</h2>
+                 <p class="column__txt">Av. Florencio Jimenez. Ressidencias "El Portal"</p> 
+                 <p class="column__txt">Telefonos: 999.99.99</p> 
+                 <p class="column__txt">Mail: marcellraul20@gmail.com</p>
+                 <!--ctrl+d papa multiplicar las columnas--> 
+               </div>
+               
+               <div class="column column--33">
+                 <h2 class="column__title">Siguenos en las Redes</h2>
+                 <p class="column__txt"><a href="" class="icon-facebook"> Facebook</a></p>
+                 <p class="column__txt"><a href="" class="icon-twitter"> Twitter</a></p>
+                 <p class="column__txt"><a href="" class="icon-youtube"> Canal de Youtube</a></p>
+               </div>
+                     <hr>
+                      <p class="copy"> (c) 2019 Your Restaurant | Todos los dereches reservados  </p>
+
+           </div>
+           
+       </footer>
+ <script src="JS/menu.js"></script>
+</body>
+</html>

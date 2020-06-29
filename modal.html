@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modales JS</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/stilos.css">
+   	<link rel="stylesheet" href="css/modales.css">
+    <link rel="stylesheet" href="css/font.css">
+	
+</head>
+<body>	
+   <header class="main-header">
+	   <div class="container container--flex">
+            <div class="logo-container  column--50">
+                <h1 class="logo"> U C L A</h1>
+            </div>
+            <div class="usuario  column--50">
+				<img class="imgusuario" src="img/apaycan.jpg" alt="">
+				<p class="p">Usuario</p><i href="" class="icon-caret" id="btncaret"></i>
+            </div>
+			<ul class="caret" id="caret">
+                <li class="maxbar bars__item"><a href="login.html" class="bars__link" >Cerrar Sesion</a></li>
+                <li class="maxbar bars__item"><a href="index.html" class="bars__link">Inicio</a></li>
+            </ul>
+        </div>
+        <div class="container container--flex">
+        
+			<nav id="navperfilu" class="main-navperfilu">
+				<div class="menu__bars">
+					<div class="uno"></div>
+					<div class="dos"></div>
+					<div class="tres"></div>
+				</div>
+				<ul class="menu">
+					<li class="menu__item"><a href="index.html" class="menu__link">1111</a> </li>
+					<li class="menu__item"><a href="" class="menu__link">2222</a> </li>
+					<li class="menu__item"><a href="" class="menu__link">3333</a> </li>
+					<li class="menu__item"><a href="" class="menu__link">4444</a> </li>
+				</ul>
+			</nav>
+        </div>
+    </header>
+   
+	<h1>Modales</h1>	
+	<input class="button btn" type="submit" value="Modal4 modal que sirve" id="Modal4">
+	<div class="modal" id="modal">
+	  <div class="modal__content">
+	    <form action="" method="" class="formlab" onsubmit="return validar()">
+	      <div class="tituloform">Registro de Usuario
+	      </div>
+	      <hr>
+	      <label for="codigo">Codigo:</label>
+	      <input id="codigo" type="text" name="codigo" placeholder="Codigo o Id" maxlength="10">
+	      <br>
+	      <label for="nombre">Nombre:</label>
+	      <input id="nombre" type="text" name="nombre" placeholder="Nombre" maxlength="20" onkeypress="return sololetras(event)">
+	      <br>
+	      <label for="apellido">Apellido:</label>
+	      <input id="apellido" type="text" name="apellido" placeholder="Apellido" maxlength="20" onkeypress="return sololetras(event)">
+	      <br>
+	      <label for="edad">Edad:</label>
+	      <input id="edad" type="text" name="edad" placeholder="Edad" maxlength="2" onkeypress="return solonumeros(event)">
+	      <br>
+	      <div class="radio">
+	        <label class="genero">Genero</label>
+	        <br>
+	        <label for="hombre">Hombre</label>
+	        <input class="radio2" id="hombre" type="radio" name="sexo">
+	        <label for="mujer">Mujer</label>
+	        <input class="radio2" id="mujer" type="radio" name="sexo">
+	      </div>
+	      <div class="form-group">
+	        <label for="exampleSelect1">Dpto</label>
+	        <select class="form-control" id="exampleSelect1" required>
+	          <option>Seleccione</option>
+	          <option>1</option>
+	          <option>2</option>
+	          <option>3</option>
+	          <option>4</option>
+	          <option>5</option>
+	        </select>
+	      </div>
+	      <br>
+	      <input class="button" type="submit" value="Aceptar" id="aceptar">
+
+	      <input class="button" type="reset" value="Cancelar" id="reiniciar">
+
+	    </form>
+	  </div>
+	  <div class="modal__boton" id="modal__boton">X</div>
+	</div>
+     
+     <h2> Modales para Factura</h2>
+     
+   <script src="JS/menuhamburguesa.js"></script>
+</body>
+</html>

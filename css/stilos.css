@@ -1,0 +1,796 @@
+@font-face{
+    font-family: "Pacifico";
+    src: url(../fonts/Pacifico-Regular.ttf);
+    /* Esto es para los estilos de las letras Pacifico, sin el bold (negrita)*/
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-MediumItalic.ttf);
+}
+
+@font-face{
+    font-family: "Montserrat";
+    font-weight:bold;
+    src: url(../fonts/Montserrat-SemiBoldItalic.ttf);
+    /* Esto es para los estilos de las letras Pacifico, sin el bold (negrita)*/
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+}
+/*---------------- Estilos base--------------*/
+img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    /*para que las imagenes no se vean gigantes*/
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 1;
+    /*para el margen tenga 0*/
+}
+.container{
+    /*delimitar el contenido de pagina, deliminar con un flex*/
+    width: 100%;
+    margin: auto;
+    
+}
+.container--flex{
+    /*le ponemos propiedades de flexbox*/
+    display: flex;
+    flex-wrap: wrap;/* los elementos que nmos etren se vayan hacia abajo*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    width: 100%;
+}
+
+/*-----------------Estilos del Header---------------------*/
+.main-header{
+    width: 100%;
+}
+
+.main_txt{
+    justify-content: center;
+    font-size: .9em;
+    font-family: cursive;
+    font-weight: 100;
+    
+}
+/*claese donde dice your restaurant*/
+.logo{
+    font-size: 1.8em;
+    color: #DE423A;
+	margin: 10px;
+	margin-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 10px;
+    padding-left: 8px;
+    font-weight: 100;
+    font-family: 'Pacifico', cursive;
+}
+/*el container que tiene el tlf, le ponemos de fondo el color naranja bonito letra blanca */
+
+.main-header__contactInfo__phone {
+    /*color de fondo para el tlf*/
+    background: #DE423A;
+    color: white;
+    margin: 0 auto;
+    padding: 10px; /* este es la posicion de los iconos*/
+    padding-left: 8px;
+    font-family: cursive;
+
+}
+.main-header__contactInfo__adress {
+    background: #34495E;
+    color: white;
+    padding: 10px;/* este es la posicion de los iconos*/
+    padding-left: 8px;
+    margin: 0 auto;
+    font-family: cursive;
+}
+/*este selector selecciona todas las clases "icon-"  . no olvidar el before*/
+.main-header [class*="icon-"]:before {
+    position: relative;
+    top: 3px;
+    right: 5px;
+}
+
+
+/*-----------------Estilos del Menu---------------------*/
+.main-nav {
+    width: 100%;
+    position: relative;
+    z-index: 2000px;
+    padding: 10px;
+    z-index: 2000; /*para ponerlo delante de todo*/
+    background: rgba(0,0,0,.65);
+
+
+}
+.icon-bars{
+    display: block;
+    color: #DE423A;/*ponerlo en blanco a ver como queda*/
+    border:  2px solid white;/* border blanco*/
+    border-radius: 10px; /*para darle la forma ovalado o circular*/
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;/*cuando pase el cursorm poner la manito*/
+    font-size: 1.7em;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: space-between;
+    
+}
+/* para darle forma a los iconos de redes sociales*/
+/* Le quitamos el arreglo para ponerle el estilo solamente al caret, luego investigamos como hacerlos de otra manera**/
+.social-icon [class*="icon-"] {
+	color: black;
+    margin-left: 6px;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 60%;
+}
+
+
+/*el icono caret esta dentro del social-icon**/
+.social-icon .icon-caret {
+	cursor: pointer;
+	color: #DE423A;
+	font-size: 2.3em;
+}
+.social-icon__link {
+    text-decoration: none;
+}
+
+/* cuando le damos click sale el menu
+    *******recordemos que para nosotros es bars**********
+*/
+.bars  /*menu*/{
+    position: absolute;/*para sacarlo de ahi*/
+    top: 56px;/*donde quiero que se vea */
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.80);
+    padding: 0;
+    margin: 0;/*espacio entre la letras y como sale*/
+    list-style: none;/*para quietar el estilo de bolits en list*/
+    text-align: center;
+    height: 0;
+    overflow: hidden;/*esto es para ocultarlo y hacerle la funcion con el JS*/
+    transition: height .2s linear;/*este es la animacion desplegable*/   
+}
+/* esto es para el menu del caret */
+.caret {
+    position: absolute;/*para sacarlo de ahi*/
+    top: 58px;/*donde quiero que se vea */
+    left: 0;
+    width: 40%;
+    background: rgba(0,0,0,.80);
+    padding: 0;
+    margin: 0;/*espacio entre la letras y como sale*/
+    list-style: none;/*para quietar el estilo de bolits en list*/
+    text-align: center;
+    height: 0;
+    overflow: hidden;/*esto es para ocultarlo y hacerle la funcion con el JS*/
+    transition: height .2s linear;/*este es la animacion desplegable*/ 
+	border-radius: 10px;
+	margin-top: -2px;
+	margin-left: 5px;
+}
+
+/*para mostrar el menu*/
+.mostrar {
+    height: 150px;/*depende de la cantidad que tengas en el menu*/
+}
+
+.mostrar1{
+    height: 75px;
+}
+/** para los enlaces en azul se los quitamos*/
+.bars__link {
+    display: block;
+    padding: 10px;/*para el grosor del las letras en el menu*/
+    color: white;
+    text-decoration: none;
+}
+
+/*cuando pase el cursor por la letras poner el color*/
+.bars__link:hover {
+     background: #DE423A;
+}
+/*para la clase seleccionada tenga el color naranja bonito*/
+.bars__link--select {
+    background: #DE423A;
+}
+
+/*-----------------Estilos de Banner---------------------*/
+.banner {
+    margin-top: -60px;
+    position: relative;
+}
+.banner__img__login{
+      border-radius: 0px;
+  
+}
+.banner:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.20);
+    z-index: 1000;
+    top: 0;
+    
+}
+/* Para quitarnos el dolor de cabeza con las imgenes,, para que todas la imenes cuadren perfectamente*/
+.banner__img { 
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 0px;
+}
+/* esto es lo para ponerlo alfrente de la imagen*/
+.banner__content {
+    width: 90%;
+    color: white;
+    text-align: center;
+    position: absolute;/**con esto es que lo ponemos en frente la imagen en el centro**/
+    z-index: 1500;
+    top: 50%;/* aqui es para la posicion de las letras*/
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); /*esto es la para la posicion especifica*/       
+    font-size: 1.8em;
+    font-weight: lighter;
+    font-family: cursive;
+
+}
+
+/*-----------------Estilos de Principales---------------------*/
+/* este es el cudron de los titulos y el texto en naranja bonito*/
+.group--color .container {
+    background: #DE423A;/** #DE423A;*/
+    padding: 2px;/* para darle el tamaño al regtangulo naranja*/
+    color: white;
+    text-align: center;
+}
+/*los estilos de titulo*/
+.main__title {
+    margin: 15px 0;
+    font-size: 1.8em;
+    font-family: 'Pacifico';
+    font-weight: 100;
+}
+/**/
+.main__txt {
+    padding: 5px;
+    justify-content: center;
+    font-size: 0.9em;
+    padding-top: 2px;/*para ponerle espacio encima de la letra*/
+    padding-bottom: 2px;/*espacio debajo del la letra*/
+    font-family: cursive;
+    font-weight: 100;
+}
+
+
+.column_title {
+    text-align: center;/*nombre del plato centrado*/
+    font-size: 1.5em;
+    padding-top: 2px;/*para ponerle espacio encima de la letra*/
+    padding-bottom: 2px;/*espacio debajo del la letra*/
+    font-family: cursive;
+    font-weight: 600;
+    }
+
+.column__text {
+    justify-content: center;
+    font-size: 0.9em;
+    padding-top: 2px;/*para ponerle espacio encima de la letra*/
+    padding-bottom: 2px;/*espacio debajo del la letra*/
+    font-family: cursive;
+    font-weight: 100;
+}
+/*esto es para la segunda columna, dentro de la descripcion estan el section y dentro del section las columnas. en una la imagen y en otra el texto.... :nth-child(2) */
+.main__about_description .column:nth-child(2) {
+    padding: 20px;
+}
+/* para el boton contacto bonito*/
+.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    background: #DE423A;
+    color: white;
+    padding: 10px;
+    margin: 10px auto; /*para que quede centrado*/
+    border-radius: 10px;
+}
+.group__title {
+    font-family: 'Pacifico';
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.6em;
+    margin: 8px;
+}
+
+.today-special .column {
+    margin-bottom: 20px;/*para separarlos y espaciado*/
+    text-align: center
+}
+.today-special__img {
+    margin: auto;/* para que la imagen quede centrada por todos lados*/
+    max-width: 350px;/* para que la imagen tenga un maximo de tamaño*/
+}
+/* los titulos de los platos*/
+.today-special__title{
+    text-align: center;/*nombre del plato centrado*/
+    font-size: 1.1em;
+    padding-top: 10px;/*para ponerle espacio encima de la letra*/
+    padding-bottom: 10px;/*espacio debajo del la letra*/
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.today-special__title1{
+        font-size: 1.8em;
+        font-family: 'Pacifico';
+        text-align: center;
+        font-weight: 100
+    }
+.today-special__price {
+    font-size: 1.5em;
+    color: #DE423A;
+    font-weight: bold;
+}
+
+/*-----------------Estilos del Footer---------------------*/
+.main-footer {
+    margin: auto;
+    background: #111010 ;
+    color: white;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    font-size: 0.8em;
+}
+
+.column--33 {
+        font-size: .7em;
+    }
+.copy {
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    
+}
+
+.main-footer [class*="icon-"] {
+    color: white;
+    text-decoration: none;
+    border-radius: white;
+    
+}
+
+.main-footer [class*="icon-"]:before {
+    position: relative;
+    top: 2.2px;
+    right: 2px;
+}
+
+/*para el footer*/
+.main-footer .column__title{
+        text-align: center;
+    margin: 0px;
+    margin-bottom: 3px;
+			margin-left: 20px;
+
+    
+}
+/* para las letras queden mas juntas*/
+.main-footer .column__txt{
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 0px;
+    font-size: 1.2em;
+		margin-left: 20px;
+
+}
+/*-----------------Estilos del Responsive---------------------*/
+/*                   este es el minimo para que cambie a desktop*/
+@media screen and (min-width:491px) {
+
+    .container {
+        width: 550px;
+    }
+    
+    .group--color .container {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .main_txt{
+        justify-content: center;
+        font-size: 1.05em;
+        font-family: cursive;
+        font-weight: 100;
+    }
+    
+    .logo{
+        color: white;
+        padding-right: 10px;
+        padding-left: 20px;
+    }
+    
+    .main-header__contacInfo {
+        text-align: right;
+        z-index: 1000px;
+        
+    }
+    
+    .banner {
+        margin-top: -145px;
+        z-index: -1100;
+    }
+	 .banner__content {
+        font-size: 1.6em;
+		top: 70%
+    }
+	
+    /*separar mas el main*/   
+    .main{
+        padding-bottom: 8px;
+    }
+    
+    .main-header__contactInfo__phone{
+        background: none;
+        font-family: cursive;
+        font-weight: 600;
+
+    } 
+    
+    .main-header__contactInfo__adress {
+        color: white;
+        background: none;
+        font-family: cursive;
+        font-weight: 600;
+
+    }
+    
+    .main-nav {
+        background: rgba(0,0,0,.65);
+    }
+    
+   
+    
+    .icon-bars{
+        display: block;
+        color: white;/*ponerlo en blanco a ver como queda*/
+        border:  2px solid white;/* border blanco*/
+        border-radius: 10px; /*para darle la forma ovalado o circular*/
+        width: 40px;
+        height: 40px;
+        line-height: 45px;
+        text-align: center;
+        cursor: pointer;/*cuando pase el cursorm poner la manito*/
+        font-size: 1.7em;
+    }
+    /*para que las imagenes no se vean gigantes*/
+    img{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+       
+    }
+    /* Para quitarnos el dolor de cabeza con las imgenes,, para que todas la imenes cuadren perfectamente en el banner*/
+    .banner__img { 
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    }
+    
+    /*esto es para la segunda columna, dentro de la descripcion estan el section y dentro del section las columnas. en una la imagen y en otra el texto.... :nth-child(2) */
+    .main__about_description .column:nth-child(2) {
+    padding: 8px;
+    font-size: 0.9em;
+    }
+    
+    .column_title {
+        text-align: center;
+    }
+    
+    .column--33 {
+        font-size: .8em;
+    }
+    /*para quer todas las imagnes esten del mismo tamaño y no se descuadren */
+    .today-special__img {
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    .today-special__title {
+        font-size: 1.3em;
+    }
+    
+    .today-special__title1{
+        font-size: 1.8em;
+        font-family: 'Pacifico';
+        text-align: center;
+        font-weight: 100
+    }
+    
+    .column--50{
+        width: 49%;
+    }
+    .column--50--25{
+        width: 49%; /*para dividir las imagnes en 2 columna*/
+        padding-right: 1px;
+        padding-left: 1px;
+        padding: 1px;
+    }
+    
+    .column--33 {
+        width: 32%;
+        padding: 5px;
+    }
+    /*para el footer*/
+    .main-footer .column__title{
+        text-align: center;
+    }
+    
+    .main__about_description .column .column__txt {
+        line-height: 20px;
+    }  
+    
+    .main-footer .container--flex{
+        align-items: flex-start;
+    }
+    
+    .group--color .container {
+    background: #DE423A;
+    padding: 6px;/* para darle el tamaño al regtangulo naranja*/
+    color: white;
+    text-align: center;
+    }
+}
+/**--------------------------Estilos para 768px-------------------------**/
+@media screen and (min-width:768px) {
+    .container {
+        width: 800px;
+    }
+     .group--color .container {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .main_txt{
+        justify-content: center;
+        font-size: 1.2em;
+        font-family: cursive;
+        font-weight: 100;
+    }
+    
+    .today-special__title1{/*Especiales de hoy*/
+        font-size: 2.05em;
+        font-family: 'Pacifico';
+        text-align: center;
+        font-weight: 100
+    }
+    
+    .main__title {
+        font-size: 2.2em;
+    }
+    /* separamos un poco del container naraja bonito*/
+    .main__about_description {
+        margin-top: 30px;
+    }
+    /*la descripcion de la primera imagen y letra mas grande*/
+    .main__about_description .column .column_title{
+        font-size: 1.6em;
+        text-align: center;
+    }
+    /*la descripcion de la primera imagen y letra mas grande y espacio de relleno para que no se vea vacio*/
+    .main__about_description .column .column__txt {
+        line-height: 35px;
+         font-size: 1.2em;
+    } 
+    
+    /*esto es para la segunda columna, dentro de la descripcion estan el section y dentro del section las columnas. en una la imagen y en otra el texto.... :nth-child(2) */
+    .main__about_description .column--50:nth-child(2) {
+    padding: 10px;
+    }
+    
+      .main__about_description .column--50:nth-child(2) .column_txt{
+        line-height: 30px;
+    }
+    /* Para quitarnos el dolor de cabeza con las imgenes,, para que todas la imenes cuadren perfectamente en el banner*/
+    .banner__img { 
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    }
+	
+    .banner__content {
+        font-size: 2em;
+		top: 60%
+    }
+	
+    .column--50--25 {
+        width: 24.5%;/*para dividir las imagnes en 4 columnas.. 24.5%*/
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+    
+    
+     .column--33 {
+        font-size: 0.9em;
+    }
+    
+    .main-footer .container--flex{
+        align-items: flex-start;
+    }
+    
+    .group--color .container {
+    background: #DE423A;
+    padding: 12px;/* para darle el tamaño al regtangulo naranja*/
+    color: white;
+    text-align: center;
+    }
+    
+    /*para que las letras del tle 999999 y direccion se vean mas grandes*/
+    .main-header__contactInfo__phone{
+        background: none;
+        font-family: cursive;
+        font-weight: 600;
+
+    } 
+    .main-header__contactInfo__adress {
+        color: white;
+        background: none;
+        font-family: cursive;
+        font-weight: 600;
+
+    }
+}
+/**-----------------------Estilos para 1024------------------**/
+@media screen and (min-width:1024px) {
+     .container {
+        width: 1100px;
+    }
+    .main-nav {
+        padding: 0;
+    }
+    /*para ocultar el menu*/
+    .icon-bars { 
+        display: none;
+    }
+    .bars {
+        position: static;
+        display: flex;/* hago que todos esten uno al lado de otro*/
+        height: auto;
+        width: auto;
+    }
+    .bars .bars__link {
+        padding: 20px;
+		width: 130px;
+    }
+    /* Para quitarnos el dolor de cabeza con las imgenes,, para que todas la imenes cuadren perfectamente en el banner*/
+    .banner__img { 
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    }
+	 .banner__content {
+        font-size: 2.5em;
+		top: 60%
+    }
+    .group--color .container {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .today-special__img {
+        height: 320px;
+        object-fit: cover;
+    }
+    .today-special__title1{/*Especiales de hoy*/
+        font-size: 2.4em;
+        font-family: 'Pacifico';
+        text-align: center;
+        font-weight: 100
+    }
+    .main-footer .container--flex{
+        align-items: flex-start;
+    }
+
+    .group--color .container {
+    background: #DE423A;
+    padding: 30px;/* para darle el tamaño al regtangulo naranja*/
+    color: white;
+    text-align: center;
+    }
+    /*para que las letras del tle 999999 y direccion se vean mas grandes*/
+    .main-header__contactInfo__phone{
+        background: none;
+        font-family: cursive;
+        font-weight: 600;
+
+    } 
+    .main-header__contactInfo__adress {
+        color: white;
+        background: none;
+        font-family: cursive;
+        font-weight: 600;
+
+    }
+    
+    
+    .mostrar1{
+    height: 80px;
+	padding: 5px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

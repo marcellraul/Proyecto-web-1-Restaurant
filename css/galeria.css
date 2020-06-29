@@ -1,0 +1,121 @@
+.gallery_img {/* los efectos principales de la imagenes*/
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 15px;  
+    transition: all 0.3s; /*el efecto para que no se vea tosco*/
+}
+
+.gallery_img:hover {
+    transform: scale(1.04);/* para que se agrande un poco cuando el cursor este sobre la iamgen*/
+}
+/* para los efectos de las imagenes de los diferente tamaños*/
+.gallery_img--big {
+    height: 300px;
+}
+.gallery_img--small {
+    height: 150px;
+}
+
+/* Para el modal*/
+.modal{
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2500; /*para ponerlo delante de todo, este es el valor en el eje Z*/
+    display: none;
+
+}
+/* aqui estamos probando como va a quedar el modal*/
+.modal__content{
+    display: flex;/* uno al lado de otro*/
+    justify-content: center;
+    align-items: center;/*todo en el centro*/
+    height: 100vh;/* dandole posicion*/
+    
+}
+
+.modal__img {
+    width: 70%; 
+    height: auto;
+    max-height : 650px;/*para que el maximo no se distorsione*/
+    max-width: 650px;
+}
+
+.modal__boton {
+   position: absolute;
+    top: 10px;/*poner arriba...  10px contando desde ariiba*/
+    right: 18px;/* 10px contando desde la derecha*/
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family:  cursive; 
+    width: 40px;/*para crear el cuadro, horizontal*/
+    height: 30px;/*para crear el cuadro, vertical*/
+    background: #DE423A;
+    text-align: center;
+    line-height: 30px;/*para centrar la X en el cuadro*/
+    font-size: 1.8em;
+    border-radius: 15px;
+
+}
+/*para abrir el modal y las imgenes*/
+.modal__open {
+    display: block;
+}
+
+/**-----------------------Estilos para 480------------------**/
+@media screen and (min-width:490px) {
+     .group__title {
+        font-size: 2.1em;
+    }
+    
+    .gallery_img--big {
+    height: 200px;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 15px;  
+
+    }
+    .gallery_img--small {
+    height: 100px;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 15px;  
+
+    }
+}
+
+/**-----------------------Estilos para 770------------------**/
+@media screen and (min-width:768px) {
+        
+}
+
+
+/**-----------------------Estilos para 1024------------------**/
+@media screen and (min-width:1024px) {
+    .group__title {
+        font-size: 2.4em;
+    }
+     
+    .gallery_img--big {
+    height: 300px;
+    }
+    .gallery_img--small {
+    height: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

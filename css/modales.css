@@ -1,0 +1,401 @@
+
+
+*{
+	box-sizing: border-box;
+}
+
+.imgusuario{
+	max-height: 50px;
+	max-width: 50px;
+	object-fit: cover;
+	border-radius: 20px;
+	text-align: center;
+	display: flex;
+	margin-top: 7px;
+	margin-right: 30px;
+}
+.maxbar{
+		justify-content: flex-end;
+
+}
+.p{
+	font-size: 1.5em;
+	padding: 0px;
+	margin-top: 18px;
+	margin-bottom: 8px;
+    text-align: center;/*nombre del plato centrado*/
+    font-size: 1.4em;
+    padding-bottom: 0px;/*espacio debajo del la letra*/
+    font-family: cursive;
+    font-weight: 600;
+	color: #DE423A;
+}
+
+.usuario{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 0px;
+	text-align: justify;
+}
+.icon-caret {
+	padding: 0px;
+	text-align: center;
+	cursor: pointer;
+	color: #DE423A;
+	font-size: 2.3em;
+	padding-left: 10px;
+	margin-top: 12px;
+	margin-bottom: 8px;
+}
+
+/* esto es para el menu del caret */
+.caret {
+    position: absolute;/*para sacarlo de ahi*/
+	top: 10%;
+	left: 69.7%; /** lo ponemos a las izquierda -.-**/
+    width: 30%;
+    background: rgba(0,0,0,.80);
+    padding: 0;
+    margin: 0;/*espacio entre la letras y como sale*/
+    list-style: none;/*para quietar el estilo de bolits en list*/
+    text-align: center;
+    height: 0;
+    transition: height .2s linear;/*este es la animacion desplegable*/ 
+	border-radius: 10px;
+	 /**asi te vas a quedar por ahora -.- ***/
+	z-index: 1000;
+}
+
+.mostrar1{/** para el caret del usuario**/
+	margin-top: 10px;
+	height: 75px;
+	/**width: 275px;
+	margin-left: 850px;
+	**/
+}
+
+.main-navperfilu{
+	background: #DE423A;
+}
+.main-navperfilu{
+	background: #DE423A;
+	height: 70px;
+	display: flex;
+	justify-content: flex-start;/*para llevarlos toods al final*/
+	align-items: center;/*esto es para los li y lu, para centrarlos*/
+	width: 100%
+}
+.menu__link{
+	color: white;
+	text-decoration: none;
+
+}
+.bars__link{
+	justify-content: flex-start;
+}
+.menu__bars{
+	width: 35px;
+	margin: 10px 20px;
+	cursor: pointer;
+}
+.menu__item {
+	margin: 0 15px;
+}
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s;
+}
+.uno, .dos, .tres{
+	width: 100%;
+	background: rgba(0,0,0,0.80);
+	height: 4px;
+	transition: all .5s;
+	border-radius: 10px;
+}
+.dos{
+	margin: 7px 0;
+	height: 3px;
+}
+.menu__link{
+	color: black;
+}
+/**animaciones**/
+.mostrar2 .dos {
+	opacity: 0/* para que desaparezca cuando el cursor este sobre el*/
+}
+/**para ponerlos en verical o 45 grados**/
+.mostrar2 .uno {
+	transform: rotate(45deg) translate(5px, 6.5px);
+}
+
+.mostrar2 .tres {
+	transform: rotate(-45deg) translate(8px, -9px);
+}
+
+.mostrar2 .menu{
+	visibility: visible;
+	opacity: 1;
+}
+.bannerperfil {
+    margin-top: 0px;
+    position: relative;
+	max-height: 250px;
+}
+.banner__imgperfil{
+	width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0px;
+}
+.banner__contentperil{
+	width: 90%;
+	color: red;
+	text-align: center;
+	 /**transform: translateX(0%) translateY(-300%);**/
+	position: absolute;/**con esto es que lo ponemos en frente la imagen en el centro**/
+  	font-size: 2em;
+    font-weight: lighter;
+    font-family: cursive;
+}
+.sectionperfil{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-image: url(/img/olenka-kotyk-9x-PwjxC0Z8-unsplash.jpg);
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 600px;
+    padding-top: 1px;
+}
+h3,h4, .redes, .estudios{
+	text-align: center;
+	color: white;
+	padding: 0;
+	margin: 5px;
+	
+}
+.informaciones{
+	text-align: center;
+	color: white;
+	
+}
+.container--flex{
+	background: rgba(0,0,0,0.90);
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+.container--flex2{
+	   /*le ponemos propiedades de flexbox*/
+    display: flex;
+    flex-wrap: wrap;/* los elementos que nmos etren se vayan hacia abajo*/
+    justify-content: space-between;
+    align-items: center;
+	padding: 0px;
+}
+.column2{
+	width: 100%;
+}
+.imgperfil{
+	border-radius: 30%;
+	padding: 10px;
+	max-height: 300px;
+	max-width: 300px;
+	margin: auto;/**para las imagnes es con el margin auto para centrarlas**/
+	object-fit: cover;
+}
+/**
+img{
+	object-fit: cover;
+	max-height: 400px;
+	max-width: 400px;
+	
+}**/
+
+/* ---------------------------Para el modal---------------------*/
+.modal{
+    width: 45%;
+	height: 80%;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5%;
+	background: rgba(0,0,0,0.9);
+	position: fixed;/**no le afecta el scrool y se queda en un solo lugar**/
+	top: 10%;
+	left: 25%;
+	z-index: 1100;
+	display: none;
+	
+}
+
+.modal__content{
+	display: flex;/**para centrarlo **/
+	justify-content: center;
+	align-items: center;
+	margin-top: 5%;
+	
+}
+
+.modal__img{
+	width: 60%;/* cada vez que aunmente el tamaño va a aunmentar el 50% del total de la pantalla*/
+}
+.modal__boton{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: red;
+	cursor: pointer;
+	font-family: cursive;
+	font-weight: bold;
+	font-size: 1.7em;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background: white;
+	text-align: center;
+	border-radius: 40%;
+	
+}
+.modal__open{
+	display: block;	
+}
+
+/*-------------------------------------------------------*/
+
+/*----------------------Diseño del formulario----------------------*/
+
+
+ .radio input{
+    width: 10%;
+    
+
+}
+.radio {
+    padding: 0px;
+    text-align: center;
+	margin-left: -25px;
+}
+
+
+.form1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+
+}
+.form-control {
+    margin-left: 30px;
+    width: 80%;
+    padding: 2px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: cursive;
+    border-radius: 7px;
+    
+}
+form {
+    width: 350px;
+    height: auto;
+    margin: auto;
+    background: rgba(8, 6, 6,.90);
+    padding: 15px 10px;
+    padding-top: 0px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    border: 1px solid white;
+    
+}
+.tituloform {
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 20px;
+    font-family: cursive;
+    margin-top: 10px;
+}
+form hr {
+    width: 90%;
+    border: 0.5px solid white;
+}
+input, label {
+    margin-left: 30px;
+    width: 80%;
+    margin-bottom: 1px;
+    padding: 1px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: bold;
+    font-family: cursive;
+    border-radius: 7px;
+    
+}
+label{
+    color: white;
+}
+
+.button {
+    width: 50%;
+    margin-left: 90px;
+    border-radius: 5px;
+    background: #DE423A;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid white;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

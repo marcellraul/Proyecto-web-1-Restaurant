@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modales Facturas</title>
+  <link rel="stylesheet" href="css/modalesfact.css">
+  <link rel="stylesheet" href="css/font.css">
+  
+</head>
+<body>
+  <h2>Modales para Facturas</h2>
+     <input class="btn btn-primary" type="submit" value="ModalFact" >
+  <div class="modal-fact" id="modal-fact">
+    <h4>prueba</h4>
+   <div class="modal--content"></div>
+       <form action="" method="" class="formlab" onsubmit="return validar()">
+	      <div class="tituloform">Registro de Usuario
+	      </div>
+	      <hr>
+	      <label for="codigo">Codigo:</label>
+	      <input id="codigo" type="text" name="codigo" placeholder="Codigo o Id" maxlength="10">
+	      <br>
+	      <label for="nombre">Nombre:</label>
+	      <input id="nombre" type="text" name="nombre" placeholder="Nombre" maxlength="20" onkeypress="return sololetras(event)">
+	      <br>
+	      <label for="apellido">Apellido:</label>
+	      <input id="apellido" type="text" name="apellido" placeholder="Apellido" maxlength="20" onkeypress="return sololetras(event)">
+	      <br>
+	      <label for="edad">Edad:</label>
+	      <input id="edad" type="text" name="edad" placeholder="Edad" maxlength="2" onkeypress="return solonumeros(event)">
+	      <br>
+	      <div class="radio">
+	        <label class="genero">Genero</label>
+	        <br>
+	        <label for="hombre">Hombre</label>
+	        <input class="radio2" id="hombre" type="radio" name="sexo">
+	        <label for="mujer">Mujer</label>
+	        <input class="radio2" id="mujer" type="radio" name="sexo">
+	      </div>
+	      <div class="form-group">
+	        <label for="exampleSelect1">Dpto</label>
+	        <select class="form-control" id="exampleSelect1" required>
+	          <option>Seleccione</option>
+	          <option>1</option>
+	          <option>2</option>
+	          <option>3</option>
+	          <option>4</option>
+	          <option>5</option>
+	        </select>
+	      </div>
+	      <br>
+	      <input class="button" type="submit" value="Aceptar" id="aceptar">
+
+	      <input class="button" type="reset" value="Cancelar" id="reiniciar">
+
+	    </form>
+   
+    
+  </div>
+  
+</body>
+</html>
